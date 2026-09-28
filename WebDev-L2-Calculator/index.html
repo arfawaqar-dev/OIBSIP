@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scientific Calculator | OIB-SIP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <section class="calculator">
+
+            <!-- Header -->
+            <header class="calculator-header">
+
+                <div>
+                    <p class="eyebrow">OIB-SIP • WEB DEVELOPMENT</p>
+                    <h1>Scientific Calculator</h1>
+                </div>
+
+                <div class="header-actions">
+                    <button id="scientific-toggle" class="toggle-button">
+                        ƒx
+                    </button>
+
+                    <button id="angle-mode" class="mode-button">
+                        DEG
+                    </button>
+                </div>
+
+            </header>
+
+
+            <!-- Display -->
+            <section class="display-section">
+
+                <div id="expression-display" class="expression-display">
+                    0
+                </div>
+
+                <div id="result-display" class="result-display">
+                    0
+                </div>
+
+            </section>
+
+
+            <!-- Scientific Panel -->
+            <section id="scientific-panel" class="scientific-panel">
+
+                <button class="scientific" data-value="sin(">
+                    sin
+                </button>
+
+                <button class="scientific" data-value="cos(">
+                    cos
+                </button>
+
+                <button class="scientific" data-value="tan(">
+                    tan
+                </button>
+
+
+                <button class="scientific" data-value="asin(">
+                    sin⁻¹
+                </button>
+
+                <button class="scientific" data-value="acos(">
+                    cos⁻¹
+                </button>
+
+                <button class="scientific" data-value="atan(">
+                    tan⁻¹
+                </button>
+
+
+                <button class="scientific" data-value="sqrt(">
+                    √
+                </button>
+
+                <button class="scientific" data-value="log(">
+                    log
+                </button>
+
+                <button class="scientific" data-value="ln(">
+                    ln
+                </button>
+
+
+                <button class="scientific" data-value="^2">
+                    x²
+                </button>
+
+                <button class="scientific" data-value="^">
+                    xʸ
+                </button>
+
+                <button class="scientific" data-value="!">
+                    x!
+                </button>
+
+
+                <button class="scientific" data-value="π">
+                    π
+                </button>
+
+                <button class="scientific" data-value="e">
+                    e
+                </button>
+
+                <button class="scientific" data-value="%">
+                    %
+                </button>
+
+            </section>
+
+
+            <!-- Calculator Buttons -->
+            <section class="calculator-buttons">
+
+                <button class="function" data-action="clear">
+                    AC
+                </button>
+
+                <button class="function" data-action="backspace">
+                    ⌫
+                </button>
+
+                <button class="function" data-value="(">
+                    (
+                </button>
+
+                <button class="function" data-value=")">
+                    )
+                </button>
+
+
+                <button class="operator" data-value="/">
+                    ÷
+                </button>
+
+
+                <button class="number" data-value="7">
+                    7
+                </button>
+
+                <button class="number" data-value="8">
+                    8
+                </button>
+
+                <button class="number" data-value="9">
+                    9
+                </button>
+
+                <button class="operator" data-value="*">
+                    ×
+                </button>
+
+
+                <button class="number" data-value="4">
+                    4
+                </button>
+
+                <button class="number" data-value="5">
+                    5
+                </button>
+
+                <button class="number" data-value="6">
+                    6
+                </button>
+
+                <button class="operator" data-value="-">
+                    −
+                </button>
+
+
+                <button class="number" data-value="1">
+                    1
+                </button>
+
+                <button class="number" data-value="2">
+                    2
+                </button>
+
+                <button class="number" data-value="3">
+                    3
+                </button>
+
+                <button class="operator" data-value="+">
+                    +
+                </button>
+
+
+                <button class="number zero" data-value="0">
+                    0
+                </button>
+
+                <button class="number" data-value=".">
+                    .
+                </button>
+
+                <button class="equals" data-action="calculate">
+                    =
+                </button>
+
+            </section>
+
+
+            <!-- History -->
+            <section class="history-section">
+
+                <div class="history-header">
+
+                    <h2>History</h2>
+
+                    <button id="clear-history">
+                        Clear
+                    </button>
+
+                </div>
+
+                <div id="history-list" class="history-list">
+
+                    <p class="empty-history">
+                        No calculations yet
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+                <p>HTML5 • CSS3 • Vanilla JavaScript</p>
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

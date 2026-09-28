@@ -1,0 +1,1371 @@
+/* =========================================
+   ABDUL SATTAR EDHI TRIBUTE PAGE
+   OIB-SIP WEB DEVELOPMENT
+   THEME: DEEP NAVY + GOLD + CREAM
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   COLOR THEME
+========================================= */
+
+:root {
+
+    --background: #F5F0E6;
+
+    --surface: #FFFFFF;
+
+    --navy: #182536;
+
+    --navy-light: #22344A;
+
+    --navy-soft: #2A3D54;
+
+    --text: #3F4A57;
+
+    --muted: #707985;
+
+    --gold: #C6A15B;
+
+    --gold-dark: #A78342;
+
+    --gold-light: #E0C98E;
+
+    --cream: #F5F0E6;
+
+    --border: #DDD5C5;
+
+    --shadow:
+        0 18px 50px rgba(24, 37, 54, 0.16);
+
+    --max-width: 1120px;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+.container {
+
+    width: min(
+        calc(100% - 40px),
+        var(--max-width)
+    );
+
+    margin: auto;
+}
+
+
+.section {
+    padding: 100px 0;
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--gold-dark);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 50px;
+}
+
+
+.section-heading h2 {
+
+    color: var(--navy);
+
+    font-size: clamp(
+        30px,
+        5vw,
+        48px
+    );
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+
+.section-heading p {
+
+    color: var(--muted);
+
+    max-width: 600px;
+}
+
+
+.centered {
+
+    text-align: center;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(24, 37, 54, 0.97);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom:
+        1px solid rgba(
+            198,
+            161,
+            91,
+            0.20
+        );
+}
+
+
+.nav-container {
+
+    width: min(
+        calc(100% - 40px),
+        var(--max-width)
+    );
+
+    height: 72px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+
+    color: var(--gold-light);
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 28px;
+}
+
+
+nav a {
+
+    color: #E7E9EC;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+
+nav a:hover {
+
+    color: var(--gold-light);
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background-image:
+        url(
+            "https://upload.wikimedia.org/wikipedia/commons/5/5e/Abdul_Sattar_Edhi.jpg"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24, 37, 54, 0.95),
+            rgba(34, 52, 74, 0.78)
+        );
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: min(
+        calc(100% - 40px),
+        850px
+    );
+
+    animation: heroIn 1s ease;
+}
+
+
+.hero-label {
+
+    color: var(--gold-light);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(
+        48px,
+        9vw,
+        92px
+    );
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-subtitle {
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: #E2E5E9;
+
+    font-size: 18px;
+}
+
+
+.primary-button,
+.secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 13px 24px;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition: 0.25s;
+}
+
+
+.primary-button {
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+    border-radius: 4px;
+}
+
+
+.primary-button:hover {
+
+    background: var(--gold-light);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(198, 161, 91, 0.25);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    padding: 80px 0;
+
+    background: var(--surface);
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.intro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.intro h2 {
+
+    color: var(--navy);
+
+    font-size: clamp(
+        28px,
+        4vw,
+        43px
+    );
+
+    line-height: 1.2;
+}
+
+
+.intro p {
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+
+    background: var(--background);
+}
+
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.portrait-card {
+
+    background: var(--surface);
+
+    padding: 12px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+
+.portrait-card img {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+}
+
+
+.portrait-caption {
+
+    padding: 17px 10px 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+.portrait-caption strong {
+
+    color: var(--navy);
+
+    font-size: 14px;
+}
+
+
+.portrait-caption span {
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.about-text p {
+
+    margin-bottom: 20px;
+
+    color: var(--muted);
+}
+
+
+blockquote {
+
+    margin: 30px 0;
+
+    padding: 20px 25px;
+
+    border-left:
+        4px solid var(--gold);
+
+    background: var(--surface);
+
+    color: var(--navy);
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    box-shadow:
+        0 5px 20px
+        rgba(24, 37, 54, 0.06);
+}
+
+
+.facts {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+.fact {
+
+    padding: 18px;
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    transition: 0.25s;
+}
+
+
+.fact:hover {
+
+    border-color: var(--gold-light);
+
+    transform: translateY(-3px);
+}
+
+
+.fact strong {
+
+    display: block;
+
+    color: var(--gold-dark);
+
+    font-size: 24px;
+}
+
+
+.fact span {
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline-section {
+
+    background: var(--surface);
+}
+
+
+.timeline {
+
+    position: relative;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 94px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background: var(--border);
+}
+
+
+.timeline-item {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        95px 1fr;
+
+    gap: 35px;
+
+    margin-bottom: 38px;
+}
+
+
+.timeline-year {
+
+    position: relative;
+
+    color: var(--gold-dark);
+
+    font-weight: 800;
+
+    font-size: 15px;
+
+    text-align: right;
+}
+
+
+.timeline-year::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+
+    height: 9px;
+
+    background: var(--gold);
+
+    border-radius: 50%;
+
+    right: -40px;
+
+    top: 9px;
+
+    box-shadow:
+        0 0 0 5px
+        var(--surface);
+}
+
+
+.timeline-content {
+
+    padding: 22px;
+
+    background: var(--background);
+
+    border:
+        1px solid var(--border);
+
+    transition: 0.25s;
+}
+
+
+.timeline-content:hover {
+
+    transform: translateX(5px);
+
+    box-shadow: var(--shadow);
+
+    border-color:
+        var(--gold-light);
+}
+
+
+.timeline-content h3 {
+
+    color: var(--navy);
+
+    margin-bottom: 7px;
+
+    font-size: 19px;
+}
+
+
+.timeline-content p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+.achievements {
+
+    background: var(--background);
+}
+
+
+.achievement-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.achievement-card {
+
+    padding: 30px;
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    transition: 0.25s;
+}
+
+
+.achievement-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow);
+
+    border-color:
+        var(--gold-light);
+}
+
+
+.card-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: #F0E7D3;
+
+    border:
+        1px solid var(--gold-light);
+
+    font-size: 22px;
+}
+
+
+.achievement-card h3 {
+
+    color: var(--navy);
+
+    margin-bottom: 10px;
+
+    font-size: 19px;
+}
+
+
+.achievement-card p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   QUOTE SECTION
+========================================= */
+
+.quote-section {
+
+    padding: 130px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #182536,
+            #2A3D54
+        );
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.quote-content {
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+.quote-mark {
+
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 80px;
+
+    line-height: 0.7;
+}
+
+
+.quote-content h2 {
+
+    font-size: clamp(
+        35px,
+        6vw,
+        58px
+    );
+
+    margin-bottom: 20px;
+}
+
+
+.quote-content p {
+
+    color: #D7DCE2;
+
+    margin-bottom: 20px;
+}
+
+
+.quote-author {
+
+    color: var(--gold-light);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   LEGACY
+========================================= */
+
+.legacy {
+
+    background: var(--surface);
+}
+
+
+.legacy-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.legacy h2 {
+
+    color: var(--navy);
+
+    font-size: clamp(
+        30px,
+        5vw,
+        46px
+    );
+
+    line-height: 1.2;
+}
+
+
+.legacy p {
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+
+.secondary-button {
+
+    background: var(--navy);
+
+    color: white;
+
+    border-radius: 4px;
+}
+
+
+.secondary-button:hover {
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(12, 18, 28, 0.78);
+}
+
+
+.modal.active {
+
+    display: flex;
+}
+
+
+.modal-content {
+
+    position: relative;
+
+    max-width: 550px;
+
+    padding: 45px;
+
+    background: var(--surface);
+
+    border-top:
+        4px solid var(--gold);
+
+    box-shadow: var(--shadow);
+
+    animation: modalIn 0.25s ease;
+}
+
+
+.modal-content h2 {
+
+    color: var(--navy);
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+
+.modal-content p {
+
+    color: var(--muted);
+}
+
+
+.close-modal {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    color: var(--muted);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.close-modal:hover {
+
+    color: var(--gold-dark);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #121D2B;
+
+    color: white;
+}
+
+
+.footer-content {
+
+    min-height: 130px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.footer-content strong {
+
+    color: var(--gold-light);
+
+    letter-spacing: 2px;
+}
+
+
+.footer-content p {
+
+    margin-top: 5px;
+
+    color: #9CA4AF;
+
+    font-size: 13px;
+}
+
+
+.footer-links a {
+
+    color: var(--gold-light);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+
+.footer-links a:hover {
+
+    color: white;
+}
+
+
+.copyright {
+
+    padding: 18px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    text-align: center;
+}
+
+
+.copyright p {
+
+    color: #737D8A;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes heroIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+}
+
+
+@keyframes modalIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+
+    nav {
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px 20px 20px;
+
+        background: var(--navy);
+    }
+
+
+    nav.active {
+
+        display: flex;
+    }
+
+
+    nav a {
+
+        padding: 12px 0;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,0.08);
+    }
+
+
+    .intro-grid,
+    .about-grid,
+    .legacy-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .achievement-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .about-grid {
+
+        max-width: 750px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .section {
+
+        padding: 70px 0;
+    }
+
+
+    .hero {
+
+        min-height: 90vh;
+
+        background-attachment: scroll;
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+    }
+
+
+    .hero-subtitle {
+
+        font-size: 15px;
+    }
+
+
+    .achievement-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .facts {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .timeline::before {
+
+        left: 5px;
+    }
+
+
+    .timeline-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding-left: 25px;
+    }
+
+
+    .timeline-year {
+
+        text-align: left;
+    }
+
+
+    .timeline-year::after {
+
+        left: -24px;
+
+        right: auto;
+    }
+
+
+    .footer-content {
+
+        padding: 35px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .modal-content {
+
+        padding: 35px 25px;
+    }
+
+}

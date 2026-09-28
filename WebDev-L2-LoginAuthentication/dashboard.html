@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SecureAuth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <nav class="navbar">
+            <h2>SecureAuthentication</h2>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </nav>
+
+        <main class="dashboard-content">
+
+            <div class="welcome-card">
+                <h1>Welcome, <span id="displayUsername"></span>!</h1>
+
+                <p>
+                    You have successfully logged in to your protected
+                    dashboard.
+                </p>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Authentication Successful
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #1e293b,
+            #0f172a 45%,
+            #020617
+        );
+
+    color: #f8fafc;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.app-container {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   CALCULATOR
+========================================= */
+
+.calculator {
+    width: 100%;
+
+    max-width: 400px;
+
+    padding: 20px;
+
+    border-radius: 24px;
+
+    background: rgba(15, 23, 42, 0.97);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.calculator-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    color: #64748b;
+
+    margin-bottom: 4px;
+}
+
+.calculator-header h1 {
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   HEADER BUTTONS
+========================================= */
+
+.header-actions {
+    display: flex;
+
+    gap: 6px;
+}
+
+.toggle-button,
+.mode-button {
+    height: 36px;
+
+    min-width: 42px;
+
+    padding: 0 10px;
+
+    border: 1px solid #334155;
+
+    border-radius: 9px;
+
+    background: #1e293b;
+
+    color: #38bdf8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.toggle-button:hover,
+.mode-button:hover {
+    background: #334155;
+}
+
+
+/* =========================================
+   DISPLAY
+========================================= */
+
+.display-section {
+    min-height: 125px;
+
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    border-radius: 17px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    overflow: hidden;
+}
+
+.expression-display {
+    min-height: 25px;
+
+    text-align: right;
+
+    font-size: 14px;
+
+    color: #64748b;
+
+    overflow-wrap: anywhere;
+}
+
+.result-display {
+    min-height: 48px;
+
+    text-align: right;
+
+    font-size: 35px;
+
+    font-weight: 700;
+
+    color: #f8fafc;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   SCIENTIFIC PANEL
+========================================= */
+
+.scientific-panel {
+    display: none;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7px;
+
+    margin-bottom: 10px;
+
+    padding: 10px;
+
+    border-radius: 14px;
+
+    background: #111827;
+
+    border: 1px solid #1e293b;
+}
+
+
+/* Show scientific panel */
+
+.scientific-panel.active {
+    display: grid;
+}
+
+
+.scientific {
+    height: 38px;
+
+    border: 1px solid #334155;
+
+    border-radius: 9px;
+
+    background: #1e293b;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+.scientific:hover {
+    background: #334155;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CALCULATOR BUTTONS
+========================================= */
+
+.calculator-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   GENERAL BUTTON
+========================================= */
+
+.calculator-buttons button {
+    height: 55px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.1s,
+        opacity 0.1s;
+}
+
+.calculator-buttons button:hover {
+    opacity: 0.85;
+}
+
+.calculator-buttons button:active {
+    transform: scale(0.94);
+}
+
+
+/* =========================================
+   NUMBERS
+========================================= */
+
+.number {
+    background: #1e293b;
+
+    color: #f8fafc;
+}
+
+
+/* =========================================
+   FUNCTIONS
+========================================= */
+
+.function {
+    background: #334155;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================================
+   OPERATORS
+========================================= */
+
+.operator {
+    background: #0c4a6e;
+
+    color: #7dd3fc;
+}
+
+
+/* =========================================
+   EQUALS
+========================================= */
+
+.equals {
+    background: #0284c7;
+
+    color: #ffffff;
+
+    grid-column: span 2;
+}
+
+
+/* =========================================
+   ZERO
+========================================= */
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* =========================================
+   HISTORY
+========================================= */
+
+.history-section {
+    margin-top: 12px;
+
+    padding: 11px;
+
+    border-radius: 13px;
+
+    background: #111827;
+
+    border: 1px solid #1e293b;
+}
+
+.history-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 6px;
+}
+
+.history-header h2 {
+    font-size: 12px;
+}
+
+.history-header button {
+    border: none;
+
+    background: transparent;
+
+    color: #38bdf8;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.history-list {
+    max-height: 65px;
+
+    overflow-y: auto;
+}
+
+.empty-history {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.history-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 4px 0;
+
+    font-size: 11px;
+
+    color: #cbd5e1;
+
+    border-bottom: 1px solid #1e293b;
+}
+
+.history-result {
+    color: #38bdf8;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 12px;
+
+    text-align: center;
+
+    color: #475569;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .app-container {
+        padding: 10px;
+    }
+
+    .calculator {
+        padding: 15px;
+
+        border-radius: 20px;
+    }
+
+    .calculator-header h1 {
+        font-size: 18px;
+    }
+
+    .calculator-buttons {
+        gap: 6px;
+    }
+
+    .calculator-buttons button {
+        height: 52px;
+
+        font-size: 16px;
+    }
+
+    .scientific {
+        height: 36px;
+
+        font-size: 12px;
+    }
+
+    .result-display {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 350px) {
+
+    .calculator {
+        padding: 12px;
+    }
+
+    .calculator-header h1 {
+        font-size: 16px;
+    }
+
+    .calculator-buttons button {
+        height: 48px;
+
+        font-size: 14px;
+    }
+
+    .scientific {
+        height: 34px;
+
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - To-Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="header-content">
+
+            <div>
+                <p class="eyebrow">DAILY PRODUCTIVITY</p>
+                <h1>TaskFlow</h1>
+                <p class="subtitle">
+                    Organize your day, one task at a time.
+                </p>
+            </div>
+
+            <div class="date-box">
+                <span id="currentDate"></span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Add Task Section -->
+        <section class="add-task-card">
+
+            <form id="taskForm">
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What needs to be done?"
+                        autocomplete="off"
+                    >
+
+                    <button type="submit" class="add-btn">
+                        + Add Task
+                    </button>
+
+                </div>
+
+                <p id="errorMessage" class="error-message"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- Task Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon pending-icon">
+                    ⏳
+                </div>
+
+                <div>
+                    <span class="stat-number" id="pendingCount">
+                        0
+                    </span>
+
+                    <span class="stat-label">
+                        Pending
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon completed-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <span class="stat-number" id="completedCount">
+                        0
+                    </span>
+
+                    <span class="stat-label">
+                        Completed
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Task Lists -->
+        <section class="task-sections">
+
+
+            <!-- Pending Tasks -->
+            <div class="task-section">
+
+                <div class="section-title">
+
+                    <div>
+                        <p class="section-label">
+                            IN PROGRESS
+                        </p>
+
+                        <h2>Pending Tasks</h2>
+                    </div>
+
+                    <span class="count-badge" id="pendingBadge">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div id="pendingTasks" class="task-list">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            ✓
+                        </div>
+
+                        <h3>No pending tasks</h3>
+
+                        <p>
+                            You're all caught up!
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Completed Tasks -->
+            <div class="task-section">
+
+                <div class="section-title">
+
+                    <div>
+                        <p class="section-label completed-label">
+                            FINISHED
+                        </p>
+
+                        <h2>Completed Tasks</h2>
+                    </div>
+
+                    <span class="count-badge completed-badge" id="completedBadge">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div id="completedTasks" class="task-list">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            ○
+                        </div>
+
+                        <h3>No completed tasks</h3>
+
+                        <p>
+                            Completed tasks will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            TaskFlow &copy; 2026 · Built with HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
